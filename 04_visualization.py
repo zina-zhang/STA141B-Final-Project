@@ -116,8 +116,7 @@ print('Figure 1 saved.')
 
 
 # Figure 2 — Mean Sentiment: Beat vs. Miss (L-MD and VADER)
-# Goal: compare whether companies that beat earnings estimates used measurably
-# more positive language than those that missed.
+# Goal: compare whether companies that beat earnings estimates used measurably more positive language than those that missed.
 # Two panels for direct L-MD vs VADER cross-method comparison.
 
 fig, axes = plt.subplots(1, 2, figsize=(11, 5), sharey=False)
