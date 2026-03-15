@@ -15,6 +15,7 @@ Visualization approach (per Lecture 15 notes)
 import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+from matplotlib.ticker import PercentFormatter
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -339,12 +340,17 @@ sns.boxplot(
     data=fig5_df,
     x="ticker",
     y="return_1d",
+    hue="ticker",
     palette=PALETTE,
+    dodge=False,
     width=0.55,
     fliersize=0,
     linewidth=1.2,
     ax=ax,
 )
+# Seaborn legend
+if ax.get_legend() is not None:
+    ax.get_legend().remove()
 
 sns.stripplot(
     data=fig5_df,
